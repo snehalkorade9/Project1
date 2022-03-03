@@ -5,11 +5,12 @@ on:
     branches:
       - 'master'
       - 'main'
+      - 'SameCode'
     tags:
       - 'v*'
 
 jobs:
-  runtest:
+  run_test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2

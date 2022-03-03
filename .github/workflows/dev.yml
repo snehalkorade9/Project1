@@ -5,6 +5,7 @@ on:
     branches:
       - 'master'
       - 'main'
+      - 'SameCode'
 
 jobs:
   run_pytest:
@@ -29,6 +30,6 @@ jobs:
       - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: "test-app-skasd" #Must be unique in Heroku1
+          heroku_app_name: "test-app-skasd" #Must be unique in Heroku12345678
           heroku_email: "sk3285@njit.edu"
           usedocker: true
