@@ -24,7 +24,7 @@ def test_request_about(client):
     """This makes the index page"""
     response = client.get("/about1")
     assert response.status_code == 200
-    #assert b"About Page" in response.data
+    #assert b"About Page" in response.data1234
     assert b'<li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>' in response.data
 
 
