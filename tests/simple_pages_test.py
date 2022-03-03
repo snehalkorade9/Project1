@@ -16,6 +16,7 @@ def test_request_index_SK(client):
     assert response.status_code == 200
     assert b'<h5 class="card-title">Card 1</h5>' in response.data
     assert b'<h5 class="card-title">Card 1</h5>' in response.data
+    assert b'<a class="nav-link" href="/page4">Page 4</a>' in response.data
 
 def test_request_index(client):
     """This makes the index page"""
