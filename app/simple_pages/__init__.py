@@ -8,6 +8,6 @@ simple_pages = Blueprint('simple_pages', __name__, template_folder='templates', 
 @simple_pages.route('/<page>')
 def show(page):
     try:
-        return render_template('%s.html' % page)
+        return render_template('%s.html'%page)
     except TemplateNotFound:
         abort(404)
