@@ -5,7 +5,7 @@ on:
     branches:
       - 'master'
       - 'main'
-      - 'SameCode'
+      - 'Day1_updates'
 
 jobs:
   run_pytest:
