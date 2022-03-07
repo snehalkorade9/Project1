@@ -31,7 +31,7 @@ def test_request_docker(client):
     """This makes the index page"""
     response = client.get("/Docker")
     assert response.status_code == 200
-    assert b" Pushes an image or a repository to a registry" in response.data
+    assert b" Pulls an image or a repository from a registry" in response.data
 
 
 
