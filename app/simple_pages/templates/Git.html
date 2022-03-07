@@ -1,0 +1,84 @@
+<!doctype html>
+{% extends "base.html" %}
+{% block content %}
+<html lang="en">
+<head>
+</head>
+<body>
+<div class="container">
+    <header>
+    </header>
+    <div class="row m-2">
+        <h2>Git</h2>
+        <h4>Git is Version control system, allowing you to work together and collabrate with your team </h4>
+    </div>
+
+    <div class="row-col-6 l-2">
+        <div class="row5">
+            <div class="cols-5">
+                <div class="card">
+                    <div class="card-header h5">
+                        Git Commands
+                    </div>
+                    <div class="card-body h6">
+                        <blockquote class="blockquote mb-0 size-4">
+
+                            <h5>Git Merge</h5>
+                            <small> Merge is a powerful way to integrate changes from divergent branches. After forking
+                                the
+                                project history with git branch, git merge lets you put it back together
+                                again.</small><br>
+                            <br>
+                            <footer class="blockquote-footer small">$ git merge</footer>
+
+                            <h5>Git Commit</h5>
+                            <small> Commit takes the staged snapshot and commits it to the project history. Combined
+                                with
+                                git
+                                add, this defines the basic workflow for all Git users.</small><br>
+                            <br>
+                            <footer class="blockquote-footer">$ git commit</footer>
+
+                            <h5>Git Repo</h5>
+                            <small>A Git repository (or repo for short) contains all of the project files and the entire
+                                revision history...</small><br>
+                            <br>
+                            <footer class="blockquote-footer">$ git init</footer>
+
+                            <h5>Git Branch</h5>
+                            <small>Branch is an isolated development environments within a single repository</small><br>
+                            <br>
+                            <footer class="blockquote-footer">$ git clone</footer>
+
+                            <h5>Git Tags</h5>
+                            <small>Tags are branches that do not change. After you create a tag, there will be no more
+                                commits
+                                added to the history of the tag.</small><br>
+                            <br>
+                            <footer class="blockquote-footer">$ git tag</footer>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Optional JavaScript; choose one of the two! -->
+
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+<!-- Option 2: Separate Popper and Bootstrap JS -->
+<!--
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+-->
+
+<script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+
+
+</body>
+</html>
+{% endblock %}
