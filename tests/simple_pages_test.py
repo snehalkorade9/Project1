@@ -33,18 +33,12 @@ def test_request_flask(client):
     assert b"<p3>All the simple pages are tested under single test file.</small><br>" in response.data
 
 
-def test_request_page3(client):
+def test_request_page_cicd(client):
     """This makes the index page"""
     response = client.get("/page3")
     assert response.status_code == 200
-    assert b"Page 3" in response.data
+    assert b"<li>Open Git Hub, create Repo and copy the path</li>" in response.data
 
-
-def test_request_page4(client):
-    """This makes the index page"""
-    response = client.get("/page4")
-    assert response.status_code == 200
-    assert b"Page 4" in response.data
 
 
 def test_request_page_not_found(client):
