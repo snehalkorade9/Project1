@@ -30,6 +30,6 @@ jobs:
       - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: "test-app-skasd" #Must be unique in Heroku12345678
+          heroku_app_name: "project1-dev-07" #Must be unique in Heroku
           heroku_email: "sk3285@njit.edu"
           usedocker: true
