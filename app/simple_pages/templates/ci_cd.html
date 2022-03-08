@@ -25,11 +25,11 @@
             </div>
             <div class="card-body h8">
                 <blockquote class="blockquote mb-0 size-3">
-                    <p class="h4">Workflow</p>
+                    <p class="h4">Project structure</p>
                     <small class="mb-1">The Workflow are set using git actions. Git actions helps in defining the
                         proccess. What and when to execute is defined here</small>
-
-                    <div class="h3">Project structure</div>
+                    <br>
+                    <br>
                     <small>
                         <ul class="h4">Workflow</ul>
                         <li>dev.yml- This file executed on when pull request is hit. It first runs the pytest to check
@@ -47,21 +47,26 @@
                             </li>
                             <br>
 
-                    <ul class="h4">CI/CD Steps</ul>
-                    <li>Clone a Project</li>
-                    <li>Create a branch</li>
-                    <li>Make required changes to the branch</li>
-                    <li>Open Git Hub, create Repo and copy the path</li>
-                    <li>Update the copied path in Git Remote</li>
-                    <li>Login to Dockerhub and create Repository</li>
-                    <li>Mention the Docker repo name in prod.yml</li>
-                    <li>Login to Heroku create dev and prod apps and link it to Git Repo, create authorization key.</li>
-                    <li> In Git Sectet setting mention the key generated above</li>
-                    <li>Pipeline is now ready </li>
-                    <li>Commit and push the changes </li>
-                    <li>The changes once successfully complete, docker image is generated and deployed to both Dev and Production servers </li>
+                            <ul class="h4">CI/CD Steps</ul>
+                            <li>Clone a Project</li>
+                            <li>Create a branch</li>
+                            <li>Make required changes to the branch</li>
+                            <li>Open Git Hub, create Repo and copy the path</li>
+                            <li>Update the copied path in Git Remote</li>
+                            <li>Login to Dockerhub and create Repository</li>
+                            <li>Mention the Docker repo name in prod.yml</li>
+                            <li>Login to Heroku create dev and prod apps and link it to Git Repo, create authorization
+                                key.
+                            </li>
+                            <li> In Git Sectet setting mention the key generated above</li>
+                            <li>Pipeline is now ready</li>
+                            <li>Commit and push the changes</li>
+                            <li>The changes once successfully complete, docker image is generated and deployed to both
+                                Dev and Production servers
+                            </li>
                         </small>
-                </blockquote>  </small> </small>
+                </blockquote>
+                </small> </small>
             </div>
         </div>
     </div>
