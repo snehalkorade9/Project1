@@ -30,12 +30,12 @@ def test_request_flask(client):
     """This makes the index page"""
     response = client.get("/Python_Flask")
     assert response.status_code == 200
-    assert b"<p3>All the simple pages are tested under single test file.</small><br>" in response.data
+    assert b"<li>GitHub workflow is used to run when a particular action is triggred or completed, example on Pull/push</li>" in response.data
 
 
 def test_request_page_cicd(client):
     """This makes the index page"""
-    response = client.get("/page3")
+    response = client.get("/ci_cd")
     assert response.status_code == 200
     assert b"<li>Open Git Hub, create Repo and copy the path</li>" in response.data
 
