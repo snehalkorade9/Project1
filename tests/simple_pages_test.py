@@ -8,7 +8,6 @@ def test_request_main_menu_links(client):
     assert response.status_code == 200
     assert b'<a class="nav-link" href="/Git">Git</a>' in response.data
     assert b'<a class="nav-link" href="/Home">Home</a>' in response.data
-    assert b'<a class="nav-link" href="/Docker">Page 4</a>' in response.data
 
 
 def test_request_index_sk(client):
