@@ -22,7 +22,6 @@ jobs:
           pip install -r requirements.txt
       - name: Test with pytest
         run: pytest -vv
-
   deploy_heroku:
     runs-on: ubuntu-latest
     steps:

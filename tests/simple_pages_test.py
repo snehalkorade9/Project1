@@ -6,16 +6,8 @@ def test_request_main_menu_links(client):
     """This makes the index page"""
     response = client.get("/")
     assert response.status_code == 200
-    assert b'<a class="nav-link" href="/Git">Git</a>' in response.data
-
-
-
-def test_request_index_sk(client):
-    """This makes the index page"""
-    response = client.get("/")
-    assert response.status_code == 200
-    assert b'<h3><a href="/Docker">Docker</a></h3>' in response.data
-
+    assert b'Home' in response.data
+    assert b'<h3><a href="/Git">Git</a></h3>' in response.data
 
 def test_request_git(client):
     """This makes the index page"""
@@ -31,13 +23,14 @@ def test_request_docker(client):
     x = response.data
     if (x .find(b"https://hub.docker.com/u/sk1502") == -1):
         pytest.fail()
+    assert b'$ docker start [OPTIONS] CONTAINER [CONTAINER...]' in response.data
 
 
 def test_request_flask(client):
     """This makes the index page"""
     response = client.get("/Python_Flask")
     assert response.status_code == 200
-    assert b"Page 3" in response.data
+    assert b"<p3>All the simple pages are tested under single test file.</small><br>" in response.data
 
 
 def test_request_page3(client):
