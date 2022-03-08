@@ -39,12 +39,16 @@
             <div class="card">
                 <div class="card-header h5">
                     <blockquote class="blockquote mb-0 size-3">
-                            <div class="h3">Project structure</div><small>
-                            <ul class="h4">Workflow</ul>
-                            <li>GitHub workflow is used to run when a particular action is triggred or completed, example
-                                on
-                                Pull/push</li>
-                            <small class="mb-3 small">
+                        <small class="mb-3 small">
+                            <h3>Project structure</h3>
+                            <small>
+                                <ul class="h4">Workflow</ul>
+                                <li>GitHub workflow is used to run when a particular action is triggred or completed,
+                                    example
+                                    on
+                                    Pull/push
+                                </li>
+
                                 <li>Dev.yml- This file runs the pytest and deployes the code to development environment
                                     when
                                     pull request is hit
@@ -57,38 +61,39 @@
 
                                 <ul class="h4">Simple Pages</ul>
                                 <p>This structure helps in sharing comman code between all the pages</p>
-                                <small class="mb-3 small">
-                                    <li>_init_.py- This file defines the blue print of the project. It consists of the code required to iterate through the simple
-                                        pages
-                                    </li>
-                                    <li>base.html- This file has the comman code and is extended by all the other
-                                        pages
-                                    </li>
-                                    <li>Other html files- These files consists of the actual code of the pages</li>
-                                    <p3>All the simple pages are tested under single test file.</p3>
-                                </small><br>
 
-                                <ul class="h4">test</ul>
-                                <p>The files required for unit testing the application are present here</p>
-                                <small class="mb-3 small">
-                                    <li>simple_pages_test.py- consists of all the testing code but this only triggres
-                                        through pytest.ini
-                                    </li>
-                                     The pytest.ini file is called by the workflow to run the tests
+                                <li>_init_.py- This file defines the blue print of the project. It consists of the code
+                                    required to iterate through the simple
+                                    pages
+                                </li>
+                                <li>base.html- This file has the comman code and is extended by all the other
+                                    pages
+                                </li>
+                                <li>Other html files- These files consists of the actual code of the pages</li>
+                                <p3>All the simple pages are tested under single test file.</p3>
+                            </small><br>
 
-                                    <ul class="h4">test</ul>
-                                    <p>The files required for unit testing the application are present here</p>
-                                    <small class="mb-3 small">
-                                        <li>simple_pages_test.py- consists of all the testing code but this only
-                                            triggres through pytest.ini
-                                        </li>
-                                       The pytest.ini file is called by the workflow to run the tests</small>
-                                </small></small></small></blockquote> </div>
+                            <ul class="h4">test</ul>
+                            <p>The files required for unit testing the application are present here</p>
 
+                            <li>simple_pages_test.py- consists of all the testing code but this only triggres
+                                through pytest.ini
+                            </li>
+                            The pytest.ini file is called by the workflow to run the tests
+
+                            <ul class="h4">test</ul>
+                            <p>The files required for unit testing the application are present here</p>
+                            <li>simple_pages_test.py- consists of all the testing code but this only
+                                triggres through pytest.ini
+                            </li>
+                            The pytest.ini file is called by the workflow to run the tests</small>
+                        </small></small></small></small></blockquote>
                 </div>
+
             </div>
         </div>
     </div>
+</div>
 </div>
 
 </div>
