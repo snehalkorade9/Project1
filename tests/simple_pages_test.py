@@ -1,6 +1,7 @@
 """This test the homepage"""
 import pytest
 
+
 def test_request_main_menu_links(client):
     """This makes the index page"""
     response = client.get("/")
@@ -28,10 +29,8 @@ def test_request_docker(client):
     """This makes the index page"""
     response = client.get("/Docker")
     assert response.status_code == 200
-
-
-    #str.find(response.data)
-    if (x.find(b"https://hub.docker.com/u/sk1502")== -1):
+    x = response.data
+    if (x .find(b"https://hub.docker.com/u/sk1502") == -1):
         pytest.fail()
 
 
