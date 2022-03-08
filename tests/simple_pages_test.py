@@ -1,15 +1,13 @@
 """This test the homepage"""
-
+import pytest
 
 def test_request_main_menu_links(client):
     """This makes the index page"""
     response = client.get("/")
     assert response.status_code == 200
-    #assert b'<a class="nav-link" href="/about1.html">About</a>' in response.data
-    #assert b'<a class="nav-link" href="/page1">Page 1</a>' in response.data
     assert b'<a class="nav-link" href="/Git">Git</a>' in response.data
-    #assert b'<a class="nav-link" href="/page3">Page 3</a>' in response.data
-    #assert b'<a class="nav-link" href="/page4">Page 4</a>' in response.data
+    assert b'<a class="nav-link" href="/Home">Home</a>' in response.data
+    assert b'<a class="nav-link" href="/Docker">Page 4</a>' in response.data
 
 
 def test_request_index_sk(client):
@@ -23,7 +21,6 @@ def test_request_git(client):
     """This makes the index page"""
     response = client.get("/Git")
     assert response.status_code == 200
-    #assert b"About Page" in response.data1234
     assert b'<h4>Git is Version control system, allowing you to work together and collabrate with ' in response.data
 
 
@@ -31,9 +28,18 @@ def test_request_docker(client):
     """This makes the index page"""
     response = client.get("/Docker")
     assert response.status_code == 200
-    assert b" Pulls an image or a repository from a registry" in response.data
 
 
+    #str.find(response.data)
+    if (x.find(b"https://hub.docker.com/u/sk1502")== -1):
+        pytest.fail()
+
+
+def test_request_flask(client):
+    """This makes the index page"""
+    response = client.get("/Python_Flask")
+    assert response.status_code == 200
+    assert b"Page 3" in response.data
 
 
 def test_request_page3(client):
