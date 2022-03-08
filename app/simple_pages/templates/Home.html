@@ -6,26 +6,34 @@
 </head>
 <body>
 <div class="row-cols">
+
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="{{ url_for('static', filename='images/gitblue.png') }}" class="d-block w-100"
-                     alt="{{ url_for('static', filename='images/gitblue.png') }}" height="500px" width="400px">
+                    <img src="{{ url_for('static', filename='images/Git.jpg') }}" class="d-block w-100"
+                         alt="{{ url_for('static', filename='images/Git.jpg') }}" height="500px" width="400px">
                 <div class="carousel-caption d-none d-md-block">
-                    <h3><a href="/Git">Git</a></h3>
+                <h3><a href="/Git">Git</a></h3>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="{{ url_for('static', filename='images/dockerblue.jpeg') }}" class="d-block w-100"
-                     alt="{{ url_for('static', filename='images/dockerblue.jpeg') }}" height="500px" width="400px">
+                <img src="{{ url_for('static', filename='images/docker.jpg') }}" class="d-block w-100"
+                     alt="{{ url_for('static', filename='images/docker.jpg') }}" height="500px" width="400px">
                 <div class="carousel-caption d-none d-md-block">
                     <h3><a href="/Docker">Docker</a></h3>
+                </div></div>
+                <div class="carousel-item">
+                    <img src="{{ url_for('static', filename='images/flask.jpg') }}" class="d-block w-100"
+                         alt="{{ url_for('static', filename='images/flask.jpg') }}">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h3><a href="/Python_Flask">Python/Flask</a></h3>
+                    </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="{{ url_for('static', filename='images/python-flask.jpg') }}" class="d-block w-100"
-                         alt="{{ url_for('static', filename='images/python-flask.jpg') }}">
+                    <img src="{{ url_for('static', filename='images/CICD.png') }}" class="d-block w-100"
+                         alt="{{ url_for('static', filename='images/CICD.png') }}">
                     <div class="carousel-caption d-none d-md-block">
-                        <h3><a href="/page1">Python/Flask</a></h3>
+                        <h3><a href="/ci_cd">CI/CD</a></h3>
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"

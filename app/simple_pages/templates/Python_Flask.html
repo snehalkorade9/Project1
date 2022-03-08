@@ -21,94 +21,77 @@
                 <div class="card-body h8">
                     <blockquote class="blockquote mb-0 size-3">
                         <p class="h4">PyTest</p>
-                        <small class="mb-1">The pytest framework makes it easy to write small, readable tests, and can scale to support complex functional. Below functions are used to test in the project pytest</small>
+                        <small class="mb-1">The pytest framework makes it easy to write small, readable tests, and can
+                            scale to support complex functional. Below functions are used to test in the project
+                            pytest</small>
                         <p class="h4">Container</p>
                         <small class="mb-3 small">1. assert function is used to test the content of webpage
                             <br>2. pytest.fail() function is used to fail if a certain condition is not met
-                            <br>3. Pytest is scheduled to run everyday at given time</small><br>
+                            <br>3. Pytest is scheduled to run everyday at given time expect 2 days</small><br>
                     </blockquote>
                 </div>
             </div>
         </div>
     </div>
-    <div class="row slide mb-3">
-        <div class="col-3 card">
-            <div class="card-body h8">
-                <blockquote class="blockquote mb-0 size-3">
-                    <p class="h4">docker run</p>
-                    <small class="mb-1"> Runs a command in a new container.</small>
-                    <h6 class="text-muted">$ docker run [OPTIONS] IMAGE [COMMAND] [ARG...]</h6>
-                </blockquote>
-            </div>
-        </div>
-        <div class="col-3 card">
-            <div class="card-body h8">
-                <blockquote class="blockquote mb-0 size-3">
-                    <p class="h4">docker start</p>
-                    <small class="mb-1">Starts one or more stopped containers</small>
-                    <h6 class="text-muted">$ docker start [OPTIONS] CONTAINER [CONTAINER...]</h6>
-                </blockquote>
-            </div>
-        </div>
-        <div class="col-3 card">
-            <div class="card-body h8">
-                <blockquote class="blockquote mb-0 size-3">
-                    <p class="h4">docker stop</p>
-                    <small class="mb-1">Stops one or more running containers</small>
-                    <h6 class="text-muted">$ docker stop [OPTIONS] CONTAINER [CONTAINER...]</h6>
-                </blockquote>
+
+    <div class="row m-3">
+        <div class="row">
+            <div class="card">
+                <div class="card-header h5">
+                    <blockquote class="blockquote mb-0 size-3">
+                            <div class="h3">Project structure</div><small>
+                            <ul class="h4">Workflow</ul>
+                            <li>GitHub workflow is used to run when a particular action is triggred or completed, example
+                                on
+                                Pull/push</li>
+                            <small class="mb-3 small">
+                                <li>Dev.yml- This file runs the pytest and deployes the code to development environment
+                                    when
+                                    pull request is hit
+                                </li>
+                                <li>Prod.yml- This file runs the pytest and deployes the code to production environment
+                                    when
+                                    pull request is successful and Merge is it
+                                </li>
+                                <br>
+
+                                <ul class="h4">Simple Pages</ul>
+                                <p>This structure helps in sharing comman code between all the pages</p>
+                                <small class="mb-3 small">
+                                    <li>_init_.py- This file defines the blue print of the project. It consists of the code required to iterate through the simple
+                                        pages
+                                    </li>
+                                    <li>base.html- This file has the comman code and is extended by all the other
+                                        pages
+                                    </li>
+                                    <li>Other html files- These files consists of the actual code of the pages</li>
+                                    <p3>All the simple pages are tested under single test file.</p3>
+                                </small><br>
+
+                                <ul class="h4">test</ul>
+                                <p>The files required for unit testing the application are present here</p>
+                                <small class="mb-3 small">
+                                    <li>simple_pages_test.py- consists of all the testing code but this only triggres
+                                        through pytest.ini
+                                    </li>
+                                     The pytest.ini file is called by the workflow to run the tests
+
+                                    <ul class="h4">test</ul>
+                                    <p>The files required for unit testing the application are present here</p>
+                                    <small class="mb-3 small">
+                                        <li>simple_pages_test.py- consists of all the testing code but this only
+                                            triggres through pytest.ini
+                                        </li>
+                                       The pytest.ini file is called by the workflow to run the tests</small>
+                                </small></small></small></blockquote> </div>
+
+                </div>
             </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col-3 card">
-            <div class="card-body h8">
-                <blockquote class="blockquote mb-0 size-3">
-                    <p class="h4">docker build</p>
-                    <small class="mb-1">Builds an image form a Docker file</small>
-                    <h6 class="text-muted">$ docker build [OPTIONS] PATH | URL | -</h6>
-                </blockquote>
-            </div>
-        </div>
-        <div class="col-3 card">
-            <div class="card-body h8">
-                <blockquote class="blockquote mb-0 size-3">
-                    <p class="h4">docker pull</p>
-                    <small class="mb-1">Pulls an image or a repository from a registry<</small>
-                    <h6 class="text-muted">$ docker pull [OPTIONS] NAME[:TAG|@DIGEST]</h6>
-                </blockquote>
-            </div>
-        </div>
-        <div class="col-3 card">
-            <div class="card-body h8">
-                <blockquote class="blockquote mb-0 size-3">
-                    <p class="h4">docker push</p>
-                    <small class="mb-1">Pushes an image or a repository to a registry</small>
-                    <h6 class="text-muted">$ docker push [OPTIONS] NAME[:TAG]</h6>
-                </blockquote>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="card" style="200rem">
-            <h3>
-                Docker Getting started
-            </h3>
-            <small>
-            1. Before starting, Install git bash, pycharm, docker desktop
-            <br>2. create Git, Jetbrains, Docker accounts and link them
-            <br>3. On Git Bask or command Prompt Navigate to the App folder of your project file
-            <br>4. To run the basic test run, this will create a container
-            <br>docker run -dp 80:80 docker/getting-started
-            <br>You can view the container using command- docker ps. Kill the container using docker kill container ID
-            <br>6. To start up with Clone a repository - https://github.com/docker/getting-started/tree/master/app
-            <br>7. Create DockerFile(without any extention) in location same as package.jason
-            <br>8. Start application container using command
-            <br>docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
-            <br>9. Now go to https://localhost/ to view the application
-                </small>
-        </div>
-    </div>
+</div>
+
+</div>
 </div>
 
 <!-- Optional JavaScript; choose one of the two! -->
