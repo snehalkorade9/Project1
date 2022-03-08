@@ -2,7 +2,7 @@
 
 [![Development Workflow](https://github.com/snehalkorade9/Project1/actions/workflows/dev.yml/badge.svg)](https://github.com/snehalkorade9/Project1/actions/workflows/dev.yml)
 
-* [Development Deployment](https://project1-dev-07.herokuapp.com/Git)
+* [Development Deployment](https://project1-dev-07.herokuapp.com/)
 
 
 [![Production Workflow](https://github.com/snehalkorade9/Project1/actions/workflows/prod.yml/badge.svg)](https://github.com/snehalkorade9/Project1/actions/workflows/prod.yml)
