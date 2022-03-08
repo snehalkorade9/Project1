@@ -30,7 +30,7 @@ def test_request_flask(client):
     """This makes the index page"""
     response = client.get("/Python_Flask")
     assert response.status_code == 200
-    assert b"<li>GitHub workflow is used to run when a particular action is triggred or completed, example on Pull/push</li>" in response.data
+    assert b"GitHub workflow is used to run when a particular action is triggred or complet" in response.data
 
 
 def test_request_page_cicd(client):
