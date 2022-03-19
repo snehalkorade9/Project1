@@ -1,3 +1,4 @@
+import Operations
 """ This is the Calculator Class"""
 
 
@@ -5,10 +6,14 @@ class Calculator:
     """ This is the default result property"""
     result = 0
 
-    def add(self, value_1):
+    @staticmethod
+    def create():
+        return 2, 4, 5
+
+    def add(self):
         """ This is the add method"""
-        self.result = self.result + value_1
-        return self.result
+        add1 = Operations.Addition()
+        add1.add()
 
     def subtract(self, value_1):
         """ This is the subtract method"""
