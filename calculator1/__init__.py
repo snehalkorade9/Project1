@@ -6,7 +6,6 @@ class Calculator:
         return 2.0, 4.0, 6.0
 
     def Add(self):
-        add = Addition()
         a = Addition()
         print(a.get_result(self.create_list))
 

@@ -13,8 +13,8 @@
                 separate your applications from your infrastructure so you can deliver software quickly. </h4>
         </div>
     </header>
-    <div class="row m-3">
-        <div class="row">
+    <div class="row">
+        <div class="col-9">
             <div class="card" style="200rem">
                 <div class="card-header h5">
                     Docker objects
@@ -36,7 +36,36 @@
                 </div>
             </div>
         </div>
+        <div class="col-3">
+            <div class="row">
+                <div class="card">
+                    <div class="card-body">
+                        <h6 class="card-title">Pre learnings<br>
+                            <a href="https://www.geeksforgeeks.org/kernel-in-operating-system/"
+                               class="card-link">Kernel</a><br>
+                            <a href="https://www.cloudmanagementinsider.com/containerization-vs-virtualization/"
+                               class="card-link">Containerization vs. Virtualization</a><br>
+                            <a href="https://www.geeksforgeeks.org/difference-between-virtualization-and-hypervisor/"
+                               class="card-link">Virtualization vs. Hypervisor</a><br>
+                            <a href="https://containerjournal.com/topics/container-ecosystems/kubernetes-vs-docker-a-primer/"
+                               class="card-link">Docker vs. Kubernetes</a><br>
+                        </h6>
+                        <h6>
+                            <a>Docker Installation:</a><br></h6>
+                        <h6>
+                            <a href="https://docs.docker.com/docker-for-windows/wsl/" class="card-link">
+                                Guid</a><br>
+                            <a href="https://golb.hplar.ch/2019/01/docker-on-windows10-home-scratch.html"
+                               class="card-link">Instructions</a><br>
+                            <a href="https://www.youtube.com/watch?v=ymlWt1MqURY" class="card-link">Video</a><br>
+                            <a href="https://docs.docker.com/get-started/" class="card-link">Getting Started</a><br>
+                        </h6>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
     <div class="row slide mb-3">
         <div class="col-3 card">
             <div class="card-body h8">
@@ -65,8 +94,6 @@
                 </blockquote>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-3 card">
             <div class="card-body h8">
                 <blockquote class="blockquote mb-0 size-3">
@@ -76,6 +103,8 @@
                 </blockquote>
             </div>
         </div>
+    </div>
+    <div class="row">
         <div class="col-3 card">
             <div class="card-body h8">
                 <blockquote class="blockquote mb-0 size-3">
@@ -94,27 +123,60 @@
                 </blockquote>
             </div>
         </div>
+        <div class="col-3 card">
+            <div class="card-body h8">
+                <blockquote class="blockquote mb-0 size-3">
+                    <p class="h4">docker ps</p>
+                    <small class="mb-1">This command is used to list the running containers</small>
+                    <h6 class="text-muted">$ docker ps</h6>
+                </blockquote>
+            </div>
+        </div>
+        <div class="col-3 card">
+            <div class="card-body h8">
+                <blockquote class="blockquote mb-0 size-3">
+                    <p class="h4">docker compose</p>
+                    <small class="mb-1">This command is used to run multiple containers as a single service</small>
+                    <h6 class="text-muted">$ docker compose up --build</h6>
+                </blockquote>
+            </div>
+        </div>
     </div>
     <div class="row">
-        <div class="card" style="200rem">
-            <h3>
-                Docker Getting started
-            </h3>
-            <div class="small">
-            <h6>1. Before starting, Install git bash, pycharm, docker desktop
-            <br>2. create Git, Jetbrains, Docker accounts and link them
-            <br>3. On Git Bask or command Prompt Navigate to the App folder of your project file
-            <br>4. To run the basic test run, this will create a container
-            <br>docker run -dp 80:80 docker/getting-started
-            <br>You can view the container using command- docker ps. Kill the container using docker kill container ID
-            <br>6. To start up with Clone a repository - https://github.com/docker/getting-started/tree/master/app
-            <br>7. Create DockerFile(without any extention) in location same as package.jason
-            <br>8. Start application container using command
-            <br>docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
-            <br>9. Now go to https://localhost/ to view the application</h6>
-                </small>
-            </div></div>
-</div>
+        <div class="col-9">
+            <div class="card" style="200rem">
+                <h3>
+                    Docker Getting started
+                </h3>
+                <div class="small">
+                    <h6>1. Before starting, Install git bash, pycharm, docker desktop
+                        <br>2. create Git, Jetbrains, Docker accounts and link them
+                        <br>3. On Git Bask or command Prompt Navigate to the App folder of your project file
+                        <br>4. To run the basic test run, this will create a container
+                        <br>docker run -dp 80:80 docker/getting-started
+                        <br>You can view the container using command- docker ps. Kill the container using docker kill
+                        container ID
+                        <br>6. To start up with Clone a repository -
+                        https://github.com/docker/getting-started/tree/master/app
+                        <br>7. Create DockerFile(without any extention) in location same as package.jason
+                        <br>8. Start application container using command
+                        <br>docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
+                        <br>9. Now go to https://localhost/ to view the application</h6>
+                </div>
+            </div>
+        </div>
+        <div class="col-3 border">
+            <h6><a>Recommanded:</a><br></h6>
+            <h6>
+                <a href="https://www.ionos.com/digitalguide/server/know-how/docker-container-volumes/"
+                   class="card-link">Understanding and Managing Docker</a><br>
+                <a href="https://www.tutorialspoint.com/docker/docker_networking.htm" class="card-link">Tutorials
+                    Point</a><br>
+                <a href="https://www.youtube.com/watch?v=c6Ord0GAOp8" class="card-link">Docker
+                    Networking</a><br>
+            </h6>
+        </div>
+    </div>
 </div>
 
 <!-- Optional JavaScript; choose one of the two! -->
