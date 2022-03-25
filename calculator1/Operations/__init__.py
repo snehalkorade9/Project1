@@ -1,50 +1,39 @@
 
 """All the calaculator functions"""
 
-
 class Addition:
     """Addition function"""
-    result = 0
-
-    def get_result(self, num: tuple[float, float, float]):
+    @classmethod
+    def add(cls, value1, value2,):
         """Add numbers"""
-        print(num)
-        for i in num:
-            self.result = self.result+i
-        return self.result
+        result = value1+value2
+        return result
 
 
 class Substraction:
     """Substraction class"""
-    result = 0
-
-    def get_result(self, num: tuple[float, float, float]):
-        """Multiply numbers"""
-        for i in num:
-            self.result = i - self.result
-        return self.result
+    @classmethod
+    def sub(cls, value1, value2, ):
+        """Add numbers"""
+        result = value1 - value2
+        return result
 
 
-class Multiply:
+class Multiplication:
     """Multiply class"""
-    result = 1
 
-    def get_result(self, num: tuple[float, float, float]):
-        """Multiply numbers"""
-        for i in num:
-            self.result = i*self.result
-        return self.result
+    @classmethod
+    def mult(cls, value1, value2, ):
+        """Add numbers"""
+        result = value1 * value2
+        return result
 
 
 class Divide:
     """Divide class"""
 
-    def get_result(self, value_1, value_2):
-        """divide numbers"""
-        try:
-            result = value_1/value_2
-
-        except ZeroDivisionError as e:
-            raise e
-
+    @classmethod
+    def div(cls, value1, value2, ) -> float:
+        """Add numbers"""
+        result = value1/value2
         return result

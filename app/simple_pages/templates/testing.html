@@ -1,0 +1,127 @@
+<!doctype html>
+{% extends "base.html" %}
+{% block content %}
+<html lang="en">
+<head>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <ul class="h3"> Python Testing
+            <li class="h5">Python provides an in-build testing framework, which helps in building automated unit
+                tests.
+            </li>
+            <li class="h5">Also to test the code quality python provides pylint which is a source-code, bug and quality
+                checker.
+            </li>
+        </ul>
+    </div>
+    <div class="row">
+        <div class="row">
+            <div class="col-9">
+                <div class="card">
+                    <div class="card-header h5">
+                        Python Testing
+                    </div>
+                    <div class="card-body"><h5>PEP8</h5>
+                        <p class="h6"> PEP stands for Python Enterprise Proposal. PEP 8 is a document that provides
+                            various
+                            guidelines to write the readable in Python. PEP 8 describes how the developer can write code
+                            which can be understood globally. PEP aims to enhance the readability and consistency of
+                            code.
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-9">
+                    <div class="card">
+                        <div class="card-body"><h5>Pylint</h5>
+                            <ul class="h6"> Pylint is a tool that follows the style and rules recomanded by PEP8. Pylint
+                                checking your code for basic stylistic mistakes. It doesn't verify that your
+                                code works, it simply checks that it looks as good as possible and is readable by
+                                others.
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <h6 class="card-title">Reference links:<br>
+                                <a href="https://pylint.pycqa.org/en/latest/"
+                                   class="card-link">Pylint</a><br>
+                                <a href="https://peps.python.org/"
+                                   class="card-link">PEP</a><br>
+                                <a href="https://www.geeksforgeeks.org/automated-software-testing-with-python/"
+                                   class="card-link">Automation Testing with Python</a><br>
+                                <a href="https://njit.instructure.com/courses/21654/modules/items/780728"
+                                   class="card-link">AAA</a><br>
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-9">
+                <div class="card">
+                    <div class="card-body"><h5>Testing </h5>
+                        <p class="h6">Testing is basically verifying if all the functionility are working as expected,
+                            as defined in the requirement and best quality product is delivered to the stakeholders.
+                            <br>
+                        </p>
+                    </div></div></div></div>
+        <div class="row">
+            <div class="col-9">
+                <div class="card">
+                    <div class="card-body h6">
+                            <br><b>Testing Types</b>
+                            Testing can be done in 2 ways manually and automation.
+                            The best way is through automation, as this reduces manual repetation of work. Automation
+                            testing reduces time and efforts of testing without comprmising on the quality. To achieve
+                            different goals there are multiple types of automation testing like Unit, Integration,
+                            Smoke, Regression, API, Acceptance, Performance, Security, <br>
+</div></div></div></div>
+        <div class="row">
+            <div class="col-9">
+                <div class="card">
+                    <div class="card-body h6">
+                            <br><b>Unit Testing</b>
+                            The basic form of testing which covers small individual components is called <b>Unit
+                                testing.</b><br> Python helps perform basic tests using in-build framework. <br>In our
+                            project
+                            we have used Pytest.
+</div></div></div></div>
+        <div class="row">
+            <div class="col-9">
+                <div class="card">
+                    <div class="card-body h6">
+                            <br><br><b>AAA</b>
+                            To write good unit testing we need to follow some basic pattern called AAA.
+                        <ul class="h6">
+                            <li>Arrange- Arrange pre-requsites required for testing</li>
+                            <li>Act- Perform the main thing to be tested</li>
+                            <li>Assert- Verify if the act matches the actual behaviour</li>
+                        </ul>
+                        <div class="h6">
+                            <div class="card-body bg-dark text-white">
+                                <h6>@fixture<br>
+                                    def create_data(): <br>
+                                    return 10, 6, 2 """Arrange"""<br>
+                                    <br>
+                                    def test_addition(create_data,create_object):<br>
+                                    """This tests the addition function"""<br>
+                                    a= Addition(create_data) """Act"""<br>
+                                    assert a.get_output(Addition) == 18 """Assert"""
+                                </h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+{% endblock %}

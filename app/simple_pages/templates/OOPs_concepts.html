@@ -1,0 +1,213 @@
+<!doctype html>
+{% extends "base.html" %}
+{% block content %}
+<html lang="en">
+<head>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <h2>Object Oriented Programming</h2>
+        <h4>Object-oriented programming (OOP) is a computer programming model that organizes software design around
+            data, or objects, rather than functions and logic.</h4>
+    </div>
+    <div class="row">
+        <div class="row">
+            <div class="col-9">
+                <div class="card mb-2">
+                    <div class="card-body"><h5>Class</h5>
+                        <p class="h6"> Class is a collection of methods and objects that perform the set of instructions
+                            defined. It consists of variable which define the state of the class and behaviour which
+                            depends
+                            on the state of the class. The state can be changes by using the methods or functions.
+                            Method
+                            consists of the instruction which may update the state of the class</p>
+                        <div class="card">
+                            <div class="card-body bg-dark text-white">
+                                <h6>class Addition:<br>
+                                    """Addition function"""<br>
+                                    @classmethod<br>
+                                    def add(cls, value1, value2,):<br> """Method"""
+                                    """Add numbers"""<br> """Value1 and Value 2 can be considered as variables"""
+                                    result = value1+value2<br>
+                                    return result</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="row">
+                    <div class="card">
+                        <div class="card-body">
+                            <h6 class="card-title">Reference links:<br>
+                                <a href="https://www.guru99.com/java-oops-class-objects.html"
+                                   class="card-link">Class and Object</a><br>
+                                <a href="https://www.geeksforgeeks.org/inheritance-in-python/"
+                                   class="card-link">Inheritance</a><br>
+                                <a href="https://www.geeksforgeeks.org/polymorphism-in-python/"
+                                   class="card-link">Polymorphism</a><br>
+                                <a href="https://www.geeksforgeeks.org/encapsulation-in-python/"
+                                   class="card-link">Encapsulation</a><br>
+                                <a href="https://www.geeksforgeeks.org/abstract-classes-in-python/"
+                                   class="card-link">Abstraction</a><br>
+
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-9">
+                <div class="card mb-2">
+                    <div class="card-body"><h5>Object</h5>
+                        <p class="h6"> Objects are an instance of a class. It is an entity that has state and behavior.
+                            In a nutshell, it is an instance of a class that can access the data.</p>
+                        <div class="card">
+                            <div class="card-body bg-dark text-white">
+                                <h6>a=Addition() """Object created"""<br> a.get_output() """Object used to access
+                                    methods of class"""</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-9">
+                <div class="card mb-2">
+                    <div class="card-body"><h5>Inheritance</h5>
+                        <p class="h6"> Inheritance is a way of creating a new class for using details of an existing
+                            class without modifying it. The newly formed class is a derived class (or child class) and
+                            the existing class is a base class (or parent class). There are 4 types of Inheritance as
+                            follows </p>
+
+                        <img src="{{ url_for('static', filename='images/Types-of-Inheritance.jpg') }}"
+                             class="d-block w-100"
+                             alt="{{ url_for('static', filename='images/Types-of-Inheritance.jpg') }}">
+                        <div class="card">
+                            <div class="card-body bg-dark text-white">
+                                <h6>class Calculations: <br>
+                                    """This is the base class"""<br>
+                                    def __init__(self, list_passed_by_user):<br>
+                                    self.list_1 = list_passed_by_user<br>
+                                    <br><br>
+                                    class Addition(Calculations):<br>
+                                    """This is the child class"""<br>
+                                    def get_output(self):<br>
+                                    result = 0<br>
+                                    for i in self.list_1:<br>
+                                    result = Addition.add(i, result)<br>
+                                    return result
+                                    <img src="{{ url_for('static', filename='images/inher.png') }}"
+                                         class="d-block w-100"
+                                         alt="{{ url_for('static', filename='images/inher.png') }}">
+                                </h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-9">
+                <div class="card mb-2">
+                    <div class="card-body"><h5>Encapsulation</h5>
+                        <p class="h6"> Using OOP in Python, we can restrict access to methods and variables. This
+                            prevents data from direct modification which is called encapsulation. Encapsulation is
+                            defined as the wrapping up of data under a single unit. In Python, we denote
+                            private attributes using underscore as the prefix i.e single _ or double __.
+                            <img src="{{ url_for('static', filename='images/enc.jpg') }}"
+                                 class="d-block w-100"
+                                 alt="{{ url_for('static', filename='enc.jpg') }}">
+                    </div>
+                    <div class="card">
+                        <div class="card-body bg-dark text-white">
+                            <h6>result = Addition() """result is now the Object of class addition"""<br>
+                                result.add(i, result) """Using result the methods of the class can be accessed"""
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-9">
+                <div class="card mb-2">
+                    <div class="card-body"><h5>Polymorphism</h5>
+                        <p class="h6"> Polymorphism simply means having many forms. It refers to the use of a single
+                            type entity (method, operator or object) to represent different types in different
+                            scenarios.
+                            <img src="{{ url_for('static', filename='images/Polymorphism-in-Python.png') }}"
+                                 class="d-block w-100"
+                                 alt="{{ url_for('static', filename='Polymorphism-in-Python.png') }}">
+                    </div>
+                    <div class="card">
+                        <div class="card-body bg-dark text-white">
+                            <h6>class Addition(Calculations): <br>
+                                """The get_output menthod has the same function in different scenarios, here it is
+                                getting addition result"""<br>
+                                def get_output(self):<br>
+                                result = 0<br>
+                                for i in self.list_1:<br>
+                                result = Addition.add(i, result)<br>
+                                return result<br>
+                                <br><br>
+                                class Sub(Calculations):<br>
+                                """Here the get_output method is getting substraction result"""<br>
+                                def get_output(self):<br>
+                                result = 0<br>
+                                for i in self.list_1:<br>
+                                result = Substraction.sub(i, result)<br>
+                                return result
+
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-9">
+                    <div class="card">
+                        <div class="card-body mb-2"><h5>Abstraction</h5>
+                            <p class="lead"> Abstraction in Python is the process of hiding the real implementation of
+                                an application from the user and emphasizing only on how to use the application. The
+                                users only interact with the basic implementation of the function, but inner working is
+                                hidden. </p>
+                            <div class="card">
+                                <div class="card-body bg-dark text-white">
+                                    <h6>"""Calculator class"""<br>
+                                        class Addition(Calculations):<br>
+                                        """The get_output method in calculator class calls the addition method in
+                                        operations class where the actual addition is performed, here the user cannot
+                                        directlly access the basic implementation of the function rather it has to call
+                                        the get_output method to do the same"""<br>
+                                        def get_output(self):<br>
+                                        result = 0<br>
+                                        for i in self.list_1:<br>
+                                        result = Addition.add(i, result)<br>
+                                        return result<br>
+                                        <br><br>
+                                        """Operations class"""<br>
+                                        class Addition:<br>
+                                        """Addition function"""<br>
+                                        @classmethod<br>
+                                        def add(cls, value1, value2,):<br>
+                                        """Add numbers"""<br>
+                                        result = value1+value2<br>
+                                        return result<br>
+                                        <br>
+                                    </h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+</html>
+{% endblock %}

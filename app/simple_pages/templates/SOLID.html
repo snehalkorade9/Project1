@@ -1,0 +1,136 @@
+<!doctype html>
+{% extends "base.html" %}
+{% block content %}
+<html lang="en">
+<head>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <h2>Design Principal</h2>
+        <h4>Design Principals are the rules which help develop a understandable, reusable code</h4>
+    </div>
+
+    <div class="row">
+        <div class="col-9">
+            <div class="card">
+                <h2>SOLID Principal</h2>
+        <h4>SOLID is a set of object oriented design principles aimed at making code more maintainable and
+            flexible</h4>
+                <div class="card-body"><h5>S - Single-responsiblity Principle</h5>
+                    <p class="lead"> "A class should have one and only one reason to change, meaning that a class should
+                        have
+                        only one job." In the below example on Calculator we can see that each class carries only one
+                        responsibility example Addition class des only Addition</p>
+                    <div class="card">
+                        <div class="card-body bg-dark text-white">
+                            <h6>class Addition:<br>
+                                """Addition function"""<br>
+                                @classmethod<br>
+                                def add(cls, value1, value2,):<br>
+                                """Add numbers"""<br>
+                                result = value1+value2<br>
+                                return result</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="row">
+                <div class="card">
+                    <div class="card-body">
+                        <h6 class="card-title">Reference links SOLID:<br>
+                            <a href="https://www.digitalocean.com/community/conceptual_articles/s-o-l-i-d-the-first-five-principles-of-object-oriented-design#single-responsibility-principle"
+                               class="card-link">Single-responsiblity Principle</a><br>
+                            <a href="https://www.digitalocean.com/community/conceptual_articles/s-o-l-i-d-the-first-five-principles-of-object-oriented-design#open-closed-principle"
+                               class="card-link">Open-closed Principle</a><br>
+                            <a href="https://www.digitalocean.com/community/conceptual_articles/s-o-l-i-d-the-first-five-principles-of-object-oriented-design#liskov-substitution-principle"
+                               class="card-link">Liskov Substitution Principle</a><br>
+                            <a href="https://www.digitalocean.com/community/conceptual_articles/s-o-l-i-d-the-first-five-principles-of-object-oriented-design#interface-segregation-principle"
+                               class="card-link">Interface Segregation Principle</a><br>
+                            <a href="https://www.digitalocean.com/community/conceptual_articles/s-o-l-i-d-the-first-five-principles-of-object-oriented-design#dependency-inversion-principle"
+                               class="card-link">Dependency Inversion Principle</a>
+                        </h6>
+                    </div>
+                    <h6 class="card-title">Reference links Design Pattern:<br>
+                            <a href="https://refactoring.guru/design-patterns/python"
+                               class="card-link">Design Pattern</a><br>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-9">
+            <div class="card">
+                <div class="card-body"><h5>O - Open-closed Principle</h5>
+                    <p class="lead"> "Objects or entities should be open for extension but closed for modification." In
+                        the below example on Calculator we can see that each class carries only one
+                        responsibility example Addition class des only Addition</p>
+                    <div class="card">
+                        <div class="card-body bg-dark text-white">
+                            <h6>class Addition:<br>
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-9">
+            <div class="card">
+                <div class="card-body"><h5>L - Liskov Substitution Principle</h5>
+                    <p class="lead"> "Let q(x) be a property provable about objects of x of type T. Then q(y) should be
+                        provable for objects y of type S where S is a subtype of T." In
+                        the below example on Calculator we can see that each class carries only one
+                        responsibility example Addition class des only Addition</p>
+                    <div class="card">
+                        <div class="card-body bg-dark text-white">
+                            <h6>class Addition:<br>
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-9">
+            <div class="card">
+                <div class="card-body"><h5>I - Interface Segregation Principle</h5>
+                    <p class="lead"> "A client should never be forced to implement an interface that it doesn’t use, or
+                        clients shouldn’t be forced to depend on methods they do not use." This states that many
+                        client-specific interfaces are better than one general-purpose interface. In other words,
+                        classes should not be forced to implement interfaces they do not use.</p>
+                    <div class="card">
+                        <div class="card-body bg-dark text-white">
+                            <h6>class Addition:<br>
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-9">
+            <div class="card">
+                <div class="card-body"><h5>D - Dependency Inversion Principle</h5>
+                    <p class="lead"> "Entities must depend on abstractions, not on concretions. It states that the
+                        high-level module must not depend on the low-level module, but they should depend on
+                        abstractions."</p>
+                    <div class="card">
+                        <div class="card-body bg-dark text-white">
+                            <h6>class Addition:<br>
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+{% endblock %}
