@@ -1,35 +1,37 @@
 """This test the homepage"""
+import pytest
 from _pytest.fixtures import fixture
-from calculator1 import Calculations, Addition, Sub, Mutiply, Division
+
+from calculator import Calculator
 
 
 @fixture
 def create_data():
-    return 10, 6, 2
+    return 10.0
 
-def test_addition(create_data,create_object):
+def test_addition(create_data):
     """This makes the index page"""
-    a= Addition(create_data)
-    assert a.get_output(Addition) == 18
-
+    assert (Calculator.add(create_data)) == 14
 
 def test_substraction(create_data):
     """This makes the index page"""
-    a = Calculations(create_data)
-    assert Sub.get_output(Sub) == 2
+    assert (Calculator.subtract(create_data)) == 6
 
 
 def test_multiply(create_data):
     """This makes the index page"""
-    a = Calculations(create_data)
-    assert Mutiply.get_output() == 120
+    assert (Calculator.multiply(create_data)) == 40
 
 
 def test_divide(create_data):
     """This makes the index page"""
-    a = Calculations(create_data)
-    assert Division.get_output(list[5, 0]) == 120
+    assert (Calculator.divide((10,2))) == 5
 
 
 def test_divide_zero():
-    assert(Division.get_output(list[5, 0]), ZeroDivisionError)
+    with pytest.raises(ZeroDivisionError, match="Divide by 0 not allowed"):
+        Calculator.divide((5, 0))
+
+def test_invalid_exception():
+    with pytest.raises(ZeroDivisionError, match="Invalid input"):
+        Calculator.divide(create_data)

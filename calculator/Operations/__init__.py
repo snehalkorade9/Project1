@@ -1,39 +1,26 @@
 
 """All the calaculator functions"""
 
-class Addition:
+
+class Operation:
     """Addition function"""
-    @classmethod
-    def add(cls, value1, value2,):
+    """The below method is defined static as we are not changing the state of class"""
+    def add(value1, value2):
         """Add numbers"""
         result = value1+value2
         return result
 
-
-class Substraction:
-    """Substraction class"""
-    @classmethod
-    def sub(cls, value1, value2, ):
+    def sub(value1, value2):
         """Add numbers"""
         result = value1 - value2
         return result
 
-
-class Multiplication:
-    """Multiply class"""
-
-    @classmethod
-    def mult(cls, value1, value2, ):
+    def multi(value1, value2):
         """Add numbers"""
         result = value1 * value2
         return result
 
-
-class Divide:
-    """Divide class"""
-
-    @classmethod
-    def div(cls, value1, value2, ) -> float:
+    def div(value1, value2) -> float:
         """Add numbers"""
         result = value1/value2
         return result
