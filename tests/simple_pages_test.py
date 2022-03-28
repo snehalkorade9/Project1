@@ -7,7 +7,7 @@ def test_request_main_menu_links(client):
     response = client.get("/")
     assert response.status_code == 200
     assert b'Home' in response.data
-    assert b'<h3><a href="/Git">Git</a></h3>' in response.data
+
 
 def test_request_git(client):
     """This makes the index page"""
@@ -22,9 +22,9 @@ def test_request_docker(client):
     response = client.get("/Docker")
     assert response.status_code == 200
     data = response.data
-    if data.find(b"https://hub.docker.com/u/sk1502") == -1:
-        pytest.fail()
-    ##assert b'$ docker start [OPTIONS] CONTAINER [CONTAINER...]' in response.data
+    # if data.find(b"https://hub.docker.com/u/sk1502") == -1:
+    #     pytest.fail()
+    assert b'$ docker start [OPTIONS] CONTAINER [CONTAINER...]' in response.data
 
 
 def test_request_flask(client):
