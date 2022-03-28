@@ -1,5 +1,4 @@
 """All Calculation functions"""
-
 from abc import abstractmethod
 from calculator.operation import Operations
 
