@@ -29,7 +29,6 @@ class Calculations:
         abstract classes instead of concrete classes and functions. Here there is just
         one dependency that is also
         set on abstract class that is get_output as each calculation will have a output"""
-        pass
 
         def error_failed():
             pass
@@ -81,5 +80,4 @@ class Division(Calculations):
 
         except ZeroDivisionError:
             raise ZeroDivisionError("Divide by 0 not allowed")
-
         return result
