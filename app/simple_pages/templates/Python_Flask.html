@@ -13,6 +13,7 @@
         </div>
     </header>
     <div class="row m-3">
+        <div class="col-10">
         <div class="row">
             <div class="card" style="200rem">
                 <div class="card-header h5">
@@ -33,81 +34,69 @@
             </div>
         </div>
     </div>
-
+        <div class="col"><div class="card h6">Reference links<br>
+            <a href="https://www.youtube.com/watch?v=MO0dSIJRN8s" class="card-link h6">Tutorials 1</a>
+            <a href="https://www.youtube.com/watch?v=9VFqJoe8WWw" class="card-link h6">Tutorials 2</a>
+            </div> </div>
+</div>
+    <div class="row"><img src="{{ url_for('static', filename='images/dockerbuild.png') }}" class="d-block w-100"
+                                  alt="{{ url_for('static', filename='images/dockerbuild.png') }}">
     <div class="row m-3">
+        <div class="col-10">
         <div class="row">
             <div class="card">
 
-                    <blockquote class="blockquote mb-0 size-3">
-                        <div class="card-header h5">
-                        <small class="mb-3 small">
-                            <h3>Project structure</h3></div>
-                            <small>
-                                <ul class="h4">Workflow</ul>
-                                <li>GitHub workflow is used to run when a particular action is triggred or completed,
-                                    example
-                                    on
-                                    Pull/push
-                                </li>
+                <blockquote class="blockquote mb-0 size-3">
+                    <div class="card-header h5">
 
-                                <li>Dev.yml- This file runs the pytest and deployes the code to development environment
-                                    when
-                                    pull request is hit
-                                </li>
-                                <li>Prod.yml- This file runs the pytest and deployes the code to production environment
-                                    when
-                                    pull request is successful and Merge is it
-                                </li>
-                                <br>
+                            <h3>Project structure</h3>
+                    </div>
 
-                                <ul class="h4">Simple Pages</ul>
-                                <p>This structure helps in sharing comman code between all the pages</p>
+                        <ul class="h4">Workflow</ul>
+                        <li>GitHub workflow is used to run when a particular action is triggred or completed,
+                            example
+                            on
+                            Pull/push
+                        </li>
 
-                                <li>_init_.py- This file defines the blue print of the project. It consists of the code
-                                    required to iterate through the simple
-                                    pages
-                                </li>
-                                <li>base.html- This file has the comman code and is extended by all the other
-                                    pages
-                                </li>
-                                <li>Other html files- These files consists of the actual code of the pages</li>
-                                <p3>All the simple pages are tested under single test file.</p3>
-                            </small><br>
+                        <li>Dev.yml- This file runs the pytest and deployes the code to development environment
+                            when
+                            pull request is hit
+                        </li>
+                        <li>Prod.yml- This file runs the pytest and deployes the code to production environment
+                            when
+                            pull request is successful and Merge is hit
+                        </li>
+                        <br>
 
-                            <ul class="h4">test</ul>
-                            <p>The files required for unit testing the application are present here</p>
+                        <ul class="h4">Simple Pages</ul>
+                        <p>This structure helps in sharing comman code between all the pages</p>
 
-                            <li>simple_pages_test.py- consists of all the testing code but this only triggres
-                                through pytest.ini
-                            </li>
-                            The pytest.ini file is called by the workflow to run the tests
+                        <li>_init_.py- This file defines the blue print of the project. It consists of the code
+                            required to iterate through the simple
+                            pages
+                        </li>
+                        <li>base.html- This file has the comman code and is extended by all the other
+                            pages
+                        </li>
+                        <li>Other html files- These files consists of the actual code of the pages</li>
+                        <p3>All the simple pages are tested under single test file.</p3>
+                    </small><br>
 
-                        </small></small></small></small></blockquote>
-                </div>
+                    <ul class="h4">test</ul>
+                    <p>The files required for unit testing the application are present here</p>
 
+                    <li>simple_pages_test.py- consists of all the testing code but this only triggres
+                        through pytest.ini
+                    </li>
+                    The pytest.ini file is called by the workflow to run the tests
+
+                    </small></small></small></small></blockquote>
             </div>
         </div>
     </div>
 </div>
-</div>
 
-</div>
-</div>
-
-<!-- Optional JavaScript; choose one of the two! -->
-
-<!-- Option 1: Bootstrap Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
-
-<!-- Option 2: Separate Popper and Bootstrap JS -->
-<!--
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
--->
-
-<script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
 
 
 </body>

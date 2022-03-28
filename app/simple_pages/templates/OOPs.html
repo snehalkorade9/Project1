@@ -1,0 +1,257 @@
+<!doctype html>
+{% extends "base.html" %}
+{% block content %}
+<html lang="en">
+<head>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <h2>OOPs Terminologies</h2>
+        <h4>An object-oriented paradigm is to design the program using classes and objects.</h4>
+    </div>
+    <div class="row mb-1">
+        <div class="col-9">
+            <div class="card mb-2">
+                <div class="card-body"><h5>Class</h5>
+                    <h6>Class is a collection of methods and objects that perform the actual operations
+                        defined. It is basicall a prototype of what you want to perform</h6>
+                </div>
+            </div>
+
+                <div class="card mb-2">
+                    <div class="card-body"><h5>Object</h5>
+                        <ul class=" h6">The object is an entity that has a state and behavior associated with it.
+                            Behaviors
+                            are actions that can occur on an object. The behaviors that can be performed on a specific
+                            class
+                            of object are called methods.
+                            <li class="h6">State: It is represented by the attributes of an object. It also reflects the
+                                properties of an object.
+                            </li>
+                            <li class="h6">Behavior: It is represented by the methods of an object. It also reflects the
+                                response of an object to other objects.
+                            </li>
+                            <li class="h6">Identity: It gives a unique name to an object and enables one object to
+                                interact with other objects.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="row">
+                    <div class="card">
+                        <div class="card-body">
+                            <h6 class="card-title">Reference links:<br>
+                                <a href="https://www.digitalocean.com/community/conceptual_articles/s-o-l-i-d-the-first-five-principles-of-object-oriented-design#single-responsibility-principle"
+                                   class="card-link">Single-responsiblity Principle</a><br>
+                                <a href="https://www.digitalocean.com/community/conceptual_articles/s-o-l-i-d-the-first-five-principles-of-object-oriented-design#open-closed-principle"
+                                   class="card-link">Open-closed Principle</a><br>
+                                <a href="https://www.digitalocean.com/community/conceptual_articles/s-o-l-i-d-the-first-five-principles-of-object-oriented-design#liskov-substitution-principle"
+                                   class="card-link">Liskov Substitution Principle</a><br>
+                                <a href="https://www.digitalocean.com/community/conceptual_articles/s-o-l-i-d-the-first-five-principles-of-object-oriented-design#interface-segregation-principle"
+                                   class="card-link">Interface Segregation Principle</a><br>
+                                <a href="https://www.digitalocean.com/community/conceptual_articles/s-o-l-i-d-the-first-five-principles-of-object-oriented-design#dependency-inversion-principle"
+                                   class="card-link">Dependency Inversion Principle</a>
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div class="row"><div class="row"><img src="{{ url_for('static', filename='images/programmer.jpg') }}" class="d-block w-100"
+                                  alt="{{ url_for('static', filename='images/programmer.jpg') }}"></div>
+        <div class="row">
+            <div class="col-9">
+                <div class="card mb-2">
+                    <div class="card-body"><h5>Instantiation</h5>
+                        <p class="h6">Creating an access to the class is called Instantiation, that is creating object.
+                            There
+                            can be multiple such instance created of a class.For example, </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-9">
+                <div class="card mb-2">
+
+                    <div class="card-body"><h5>Namespace</h5>
+                        <p class="h6">The way in which the files and folders are organized which helps in easy
+                            accessability
+                            for anyone viewing your code</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-9">
+                <div class="card mb-2">
+                    <div class="card-body"><h5>Constructor</h5>
+                        <p class="h6">Constructor is the default method called when a instance is created. In Python the
+                            __init__() is executed when the class is initiated.</p>
+
+                        <div class="card">
+                            <div class="card-body bg-dark text-white">
+                                <h6> def __init__(self, list_passed_by_user):<br>
+                                    self.list_1 = list_passed_by_user
+                                </h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-9">
+                <div class="card mb-2">
+                    <div class="card-body"><h5>fixture</h5>
+                        <p class="h6">In Python we can define execute or define the pre-requisites required for testing
+                            using
+                            fixture</p>
+                        <div class="card">
+                            <div class="card-body bg-dark text-white">
+                                <h6>@fixture<br>
+                                    def create_data():<br>
+                                    return 10, 6, 2
+                                </h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-9">
+                <div class="card mb-2">
+                    <div class="card-body"><h5>type hint</h5>
+                        <p class="h6">Defining return type of a methode is called type hint</p>
+                        <div class="card-body bg-dark text-white">
+                            <h6>def div(cls, value1, value2, ) -> float:
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-9">
+                <div class="card mb-2">
+                    <div class="card-body"><h5>type casting</h5>
+                        <ul class="h6">Assigning variable a data type is called type casting. There can be two types of
+                            Type Casting in Python–
+                            <li>Implicit Type Casting- In this, methods, Python converts data type into another data
+                                type
+                                automatically.
+                            </li>
+                            <li>Explicit Type Casting- In this method, Python need user involvement to convert the
+                                variable
+                                data type into certain data type in order to the operation required. This can be
+                                achieved by
+                                three data functions int(),str() and float()
+                            </li>
+                        </ul>
+                        <div class="card-body bg-dark text-white">
+                            <h6>"""Implicit"""<br>
+                                a = 7
+                                print(type(a)) """Output
+                                < class
+                                'int'>"""<br>
+
+                                """Explicit"""<br>
+                                n=5.6 int(n) """Output- 5""" <br>
+                                a=3 float(a) """Output- 3.0"""
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-9">
+                <div class="card mb-2">
+                    <div class="card-body"><h5>unittest</h5>
+                        <h6>A unit test is a smaller test, one that checks that a single component operates in the right
+                            way.This is achieved by importing ethier unittest or pytest
+                            <br>
+                        </h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-9">
+                <div class="card mb-2">
+                    <div class="card-body"><h5>static</h5>
+                        <p class="h6">The keyword static means that the particular member belongs to a type itself,
+                            rather
+                            than to an instance of that type. This means we'll create only one instance of that static
+                            member that is shared across all instances of the class</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-9">
+                <div class="card mb-2">
+                    <div class="card-body"><h5>static method</h5>
+                        <p class="h6">The static method is a class method, it is accessible to the class but not bound
+                            to
+                            its instances. A static method can neither modify object state nor class state</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-9">
+                <div class="card mb-2">
+                    <div class="card-body"><h5>static property</h5>
+                        <p class="h6">A property defined in class but out of the method, they are initialized at the
+                            start
+                            of the program and memory is allocated at the same time. Static methods can only call static
+                            properties.</p>
+                        <div class="card-body bg-dark text-white">
+                            <h6>def div(cls, value1, value2, ) -> float:
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-9">
+                <div class="card mb-2">
+                    <div class="card-body"><h5>instance property</h5>
+                        <p class="h6">Instance variables are created when an object is instantiated and are owned by
+                            that instance only.Though they are accessible to all the constructors, methods, or blocks in
+                            the
+                            class.
+                            <br></p>
+                        <div class="card-body bg-dark text-white">
+                            <h6>def __init__(self, coffee_name, price):<br>
+                                self.coffee_name = coffee_name<br>
+                                self.price = price
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-9">
+                <div class="card mb-2">
+                    <div class="card-body"><h5>instance method</h5>
+                        <p class="h6">These methods are generally accessible and modifiable by the instance of the
+                            class. The self is passed as first argument.
+                            <br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+{% endblock %}

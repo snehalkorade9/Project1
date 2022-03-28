@@ -22,9 +22,9 @@ def test_request_docker(client):
     response = client.get("/Docker")
     assert response.status_code == 200
     data = response.data
-    # if data.find(b"https://hub.docker.com/u/sk1502") == -1:
-    #     pytest.fail()
-    assert b'$ docker start [OPTIONS] CONTAINER [CONTAINER...]' in response.data
+    if data.find(b"https://hub.docker.com/u/sk1502") == -1:
+        pytest.fail()
+    ##assert b'$ docker start [OPTIONS] CONTAINER [CONTAINER...]' in response.data
 
 
 def test_request_flask(client):

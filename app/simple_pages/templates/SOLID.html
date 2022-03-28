@@ -1,0 +1,354 @@
+<!doctype html>
+{% extends "base.html" %}
+{% block content %}
+<html lang="en">
+<head>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <h2>Design Principal</h2>
+        <h4>Design Principals are the rules which help develop a understandable, reusable code</h4>
+    </div>
+    <div class="row">
+        <div class="row mb-1">
+            <div class="col-9">
+                <div class="card">
+                    <h4>SOLID Principal</h4>
+                    <h5>SOLID is a set of object oriented design principles aimed at making code more maintainable and
+                        flexible</h5>
+                    <div class="card-body"><h5>S - Single-responsiblity Principle</h5>
+                        <p class="h6"> "A class should have one and only one reason to change, meaning that a class
+                            should
+                            have
+                            only one job." In the below example on Calculator we can see that each class carries only
+                            one
+                            responsibility example Addition class des only Addition</p>
+                        <div class="card">
+                            <div class="card-body bg-dark text-white">
+                                <h6>class Addition:<br>
+                                    """Addition function"""<br>
+                                    @classmethod<br>
+                                    def add(cls, value1, value2,):<br>
+                                    """Add numbers"""<br>
+                                    result = value1+value2<br>
+                                    return result</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="row">
+                    <div class="card">
+                        <div class="card-body">
+                            <h6 class="card-title">Reference links SOLID:<br>
+                                <a href="https://www.digitalocean.com/community/conceptual_articles/s-o-l-i-d-the-first-five-principles-of-object-oriented-design#single-responsibility-principle"
+                                   class="card-link">Single-responsiblity Principle</a><br>
+                                <a href="https://www.digitalocean.com/community/conceptual_articles/s-o-l-i-d-the-first-five-principles-of-object-oriented-design#open-closed-principle"
+                                   class="card-link">Open-closed Principle</a><br>
+                                <a href="https://www.digitalocean.com/community/conceptual_articles/s-o-l-i-d-the-first-five-principles-of-object-oriented-design#liskov-substitution-principle"
+                                   class="card-link">Liskov Substitution Principle</a><br>
+                                <a href="https://www.digitalocean.com/community/conceptual_articles/s-o-l-i-d-the-first-five-principles-of-object-oriented-design#interface-segregation-principle"
+                                   class="card-link">Interface Segregation Principle</a><br>
+                                <a href="https://www.digitalocean.com/community/conceptual_articles/s-o-l-i-d-the-first-five-principles-of-object-oriented-design#dependency-inversion-principle"
+                                   class="card-link">Dependency Inversion Principle</a>
+                            </h6>
+                        </div>
+                        <h6 class="card-title">Reference links Design Pattern:<br>
+                            <a href="https://refactoring.guru/design-patterns/python"
+                               class="card-link">Design Pattern</a><br></h6>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mb-1">
+            <div class="col-9">
+                <div class="card">
+                    <div class="card-body"><h5>O - Open-closed Principle</h5>
+                        <p class="h6"> "Objects or entities should be open for extension but closed for modification."
+                            In
+                            the below example on Calculator we can see that each class carries only one
+                            responsibility example Addition class des only Addition</p>
+                        <div class="card">
+                            <div class="card-body bg-dark text-white">
+                                <h6>
+                                    class Calculations:<br>
+                                    def __init__(self, list_passed_by_user):<br>
+                                    self.list_1 = list_passed_by_user<br>
+                                    <br>
+                                    @abstractmethod<br>
+                                    def get_output(self):<br>
+                                    """This method is defined obeys the O - Open-closed Principle of SOLID as the method
+                                    getout does the same
+                                    function on all the class of getting output but the output differs on the operation,
+                                    this method is
+                                    therefore overriden by all the functions"""<br>
+                                    pass<br>
+                                    <br>
+                                    class Addition(Calculations):<br>
+                                    """The get_output method in calculator class calls the addition method in operations
+                                    class where the actual addition is performed, here the user cannot directlly access
+                                    the basic
+                                    implementation of the function rather it has to call the get_output method to do the
+                                    same
+                                    Here Abstraction is also achieved as the by encapsulation of data"""<br>
+                                    <br>
+                                    def get_output(self):<br>
+                                    result = 0<br>
+                                    for i in self.list_1:<br>
+                                    result = Operation.add(i, result)<br>
+                                    return result<br>
+                                    <br>
+                                </h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mb-1">
+            <div class="col-9">
+                <div class="card">
+                    <div class="card-body"><h5>L - Liskov Substitution Principle</h5>
+                        <p class="h6"> "Let q(x) be a property provable about objects of x of type T. Then q(y) should
+                            be
+                            provable for objects y of type S where S is a subtype of T." In
+                            the below example on Calculator we can see that each class carries only one
+                            responsibility example Addition class des only Addition<br>
+                        </p>
+                        <div class="card">
+                            <div class="card-body bg-dark text-white">
+                                <h6>
+                                    class Calculations:<br>
+                                    """This is the base class<br>
+                                    The L - Liskov Substitution Principle states that the derived class should be used
+                                    in
+                                    substitution of base
+                                    class, here we can use all the methods of the base class without changing the basic
+                                    implementation in derived
+                                    class without any unexpected behavior change to the base class."""<br>
+                                    <br>def __init__(self, list_passed_by_user):<br>
+                                    self.list_1 = list_passed_by_user<br>
+                                    <br>
+                                    @abstractmethod<br>
+                                    def get_output(self):<br>
+                                    on the operation, this method is therefore overriden by all the functions<br>
+                                    pass<br>
+                                    <br>
+                                    class Addition(Calculations):<br>
+                                    def get_output(self):<br>
+                                    result = 0<br>
+                                    for i in self.list_1:<br>
+                                    result = Operation.add(i, result)<br>
+                                    return result<br>
+                                    <br><br>
+                                </h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mb-1">
+            <div class="col-9">
+                <div class="card">
+                    <div class="card-body"><h5>I - Interface Segregation Principle</h5>
+                        <p class="h6"> "A client should never be forced to implement an interface that it doesn’t use,
+                            or
+                            clients shouldn’t be forced to depend on methods they do not use." This states that many
+                            client-specific interfaces are better than one general-purpose interface. In other words,
+                            classes should not be forced to implement interfaces they do not use.</p>
+                        <div class="card">
+                            <div class="card-body bg-dark text-white">
+                                <h6>
+                                    class Calculations:<br>
+                                    def __init__(self, list_passed_by_user):<br>
+                                    self.list_1 = list_passed_by_user<br>
+                                    """if we create another method say get_errors_displayed. This method will not be
+                                    mandatory for all
+                                    the derived class to override rather can be only be used by specific methods like
+                                    division where error may occur"""<br>
+                                    @abstractmethod<br>
+                                    def get_output(self):<br>
+                                    pass<br>
+                                    <br>
+                                    class Addition(Calculations):<br>
+                                    def get_output(self):<br>
+                                    result = 0<br>
+                                    for i in self.list_1:<br>
+                                    result = Operation.add(i, result)<br>
+                                    return result<br>
+                                </h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mb-1">
+            <div class="col-9">
+                <div class="card">
+                    <div class="card-body"><h5>D - Dependency Inversion Principle</h5>
+                        <p class="h6"> "Entities must depend on abstractions, not on concretions. It states that the
+                            high-level module must not depend on the low-level module, but they should depend on
+                            abstractions.The Dependency Inversion principle states that our classes should depend
+                            upon interfaces or abstract classes instead of concrete classes and functions."</p>
+                        <div class="card">
+                            <div class="card-body bg-dark text-white">
+                                <h6>
+                                    class Calculations:<br>
+                                    def __init__(self, list_passed_by_user):<br>
+                                    self.list_1 = list_passed_by_user<br>
+                                    <br>
+                                    @abstractmethod<br>
+                                    def get_output(self):<br>
+                                    """The Dependency Inversion principle states that our classes should depend upon<br>
+                                    interfaces or
+                                    abstract classes instead of concrete classes and functions. Here there is just one
+                                    dependency that is also
+                                    set on abstract class that is get_output as each calculation will have a output
+                                    """<br>
+                                    pass<br>
+                                    <br>
+                                    class Addition(Calculations):<br>
+                                    def get_output(self):<br>
+                                    result = 0<br>
+                                    for i in self.list_1:<br>
+                                    result = Operation.add(i, result)<br>
+                                    return result
+                                </h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+            <img src="{{ url_for('static', filename='images/design-patterns.png') }}" class="d-block w-100"
+                                  alt="{{ url_for('static', filename='images/design-patterns.png') }}">
+        </div>
+
+    <div class="row">
+        <div class="row mb-1">
+            <div class="col-9">
+                <div class="card">
+                    <h4>Design Pattern</h4>
+                    <h5>Design Pattern provide the general repeatable solution to a commonly occurring
+                        in software design.</h5>
+                    <br>
+                    <div class="card"><h5>Creational Design pattern</h5>
+                        <div class="card-body"><h5>Singleton</h5>
+                            <p class="h6"> This pattern restricts the instantiation of a class to one object.
+                                It is a type of creational pattern and involves only one class to
+                                create methods and specified objects.
+                                It provides a global point of access to the instance created.<br>
+                            </p>
+                            <div class="card">
+                                <div class="card-body bg-dark text-white">
+                                    <h6> def __new__(cls):<br>
+                                        """ This is a singleton method.<br>
+                                        Singleton creates an instance only if there is no instance created so far;<br>
+                                        otherwise, it will return the instance that is already created."""<br>
+                                        if not hasattr(cls, 'instance'):<br>
+                                        cls.instance = super(History, cls).__new__(cls)<br>
+                                        return cls.instance</h6><br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card"><h5>Structural Design pattern</h5>
+                        <div class="card-body"><h5>Facade</h5>
+                            <p class="h6"> Facade design pattern provides a unified
+                                interface to a set of interfaces in a subsystem. It defines a higher-level interface
+                                that any subsystem can use..<br>
+                            </p>
+                            <div class="card">
+                                <div class="card-body bg-dark text-white">
+                                    <h6>"""we have our wraper class Caclulator which performs all the calculator
+                                        operations
+                                        which calls different function from different classes this is a example of
+                                        Facade pattern"""<br>
+                                    </h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-body"><h5>Behavioral Design Patterns</h5>
+                        <div class="card-body"><h5>Command</h5>
+                            <p class="h6"> Command is a behavioral design pattern that turns a request into a
+                                stand-alone
+                                object that contains all information about the request. This transformation lets you
+                                pass
+                                requests as a method arguments, delay or queue a request’s execution, and support
+                                undoable
+                                operations.<br>
+                            </p>
+                            <div class="card">
+                                <div class="card-body bg-dark text-white">
+                                    <h6>"""In our calculator program we used this pattern, we call the get_output
+                                        method of Addition,Substraction, Multiplication from the Calculaotr which is
+                                        the main wraper class. The get_output method then call the actual addition
+                                        method where 2 numbers are added"""
+                                        class Calculator:<br>
+                                        <br> """ This is the default result property"""
+                                        <br> @staticmethod
+                                        <br> def add(values):
+                                        <br> """Addition of list"""
+                                        <br> additions = Addition(values)
+                                        <br> #a.validate_input()
+                                        <br> hist = History()
+                                        <br> hist.add_history(values, "Addition of", additions.get_output())
+                                        <br> return additions.get_output()
+                                        <br>
+                                        <br> """The below is also a wraper class which calls the main addition method
+                                        which
+                                        adds 2 numbers"""
+                                        <br> class Addition(Calculations):
+                                        <br> """The get_output method in calculator class calls the addition method in
+                                        operations
+                                        <br> class where the actual addition is performed, here the user cannot
+                                        directlly
+                                        access the
+                                        <br> basic
+                                        <br> implementation of the function rather it has to call the get_output method
+                                        to
+                                        do the
+                                        <br> same
+                                        <br> Here Abstraction is also achieved as the by encapsulation of data"""
+                                        <br>
+                                        <br> def get_output(self):
+                                        <br> result = 0
+                                        <br> for i in self.list_1:
+                                        <br> result = Operation.add(i, result)
+                                        <br> return result
+                                        <br>
+                                        class Operation:<br>
+                                        """Addition function<br>
+                                        The below method is defined static as we are not changing the state of
+                                        class"""<br>
+                                        <br>
+                                        @classmethod<br>
+                                        def add(cls, value1, value2):<br>
+                                        """Add numbers"""<br>
+                                        result = value1+value2<br>
+                                        return result
+                                    </h6>
+                                </div>
+                            </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+</div>
+
+
+</body>
+</html>
+{% endblock %}
