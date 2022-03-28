@@ -2,7 +2,7 @@
 """All the calaculator functions"""
 
 
-class Operations:
+class Operation:
     """Addition function
     The below method is defined static as we are not changing the state of class"""
 

@@ -1,7 +1,7 @@
 """All Calculation functions"""
 
 from abc import abstractmethod
-from calculator.operation import Compute
+from calculator.operation import Operations
 
 
 class Calculations:
@@ -29,7 +29,7 @@ class Calculations:
         abstract classes instead of concrete classes and functions. Here there is just
         one dependency that is also
         set on abstract class that is get_output as each calculation will have a output"""
-
+        pass
 
         def error_failed():
             pass
@@ -39,11 +39,11 @@ class Addition(Calculations):
      class where the actual addition is performed, here the user cannot directlly access the basic
      implementation of the function rather it has to call the get_output method to do the same
      Here Abstraction is also achieved as the by encapsulation of data"""
-    result = 0
-    def get_output(self):
 
+    def get_output(self):
+        result = 0
         for i in self.list_1:
-            result = Compute.add(i, result)
+            result = Operations.add(i, result)
         return result
 
 
@@ -54,7 +54,7 @@ class Sub(Calculations):
         result = self.list_1[0]
         print("List:", self.list_1)
         for i in range(1, len(self.list_1)):
-            result = Compute.sub(result, self.list_1[i])
+            result = Operations.sub(result, self.list_1[i])
         return result
 
 
@@ -64,7 +64,7 @@ class Mutiply(Calculations):
     def get_output(self):
         result = 1
         for i in self.list_1:
-            result = Compute.multi(i, result)
+            result = Operations.multi(i, result)
         return result
 
 
@@ -77,7 +77,7 @@ class Division(Calculations):
         numerator = self.list_1[0]
         denomator = self.list_1[1]
         try:
-            result = Compute.div(numerator, denomator)
+            result = Operations.div(numerator, denomator)
 
         except ZeroDivisionError:
             raise ZeroDivisionError("Divide by 0 not allowed")
