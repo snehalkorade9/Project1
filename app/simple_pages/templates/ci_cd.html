@@ -7,19 +7,19 @@
 <body>
 <div class="container">
     <header>
-        <div class="row m-3">
-            <h1>Continuous Integration and Deployment</h1>
-            <h4>A CI/CD pipeline is a series of steps that must be performed in order to deliver a new version of
+        <div class="row">
+            <h4>Continuous Integration and Deployment</h4>
+            <h5>A CI/CD pipeline is a series of steps that must be performed in order to deliver a new version of
                 software. Continuous integration/continuous delivery (CI/CD) pipelines are a practice focused on
                 improving software delivery using either a DevOps or site reliability engineering (SRE)
-                approach.</h4>
+                approach.</h5>
         </div>
     </header>
 </div>
 
 <div class="row">
     <div class="row">
-        <div class="col-8">
+        <div class="col-9">
             <div class="card" style="200rem">
                 <div class="card-header h5">
                     Git Actions
@@ -27,29 +27,35 @@
                 <div class="card-body h8">
                     <blockquote class="blockquote mb-0 size-3">
                         <p class="h4">Project structure</p>
-                        <small class="mb-1">The Workflow are set using git actions. Git actions helps in defining the
-                            proccess. What and when to execute is defined here</small>
-                        <br>
+                        <div class="mb-1">The Workflow are set using git actions. Git actions helps in defining the
+                            proccess. What and when to execute is defined here
+                        </div>
                         <br>
                         <small>
-                            <ul class="h4">Workflow</ul>
-                            <li>dev.yml- This file executed on when pull request is hit. It first runs the pytest to
-                                check
-                                for any test faliur and deployes the code to deployment environment
-                            </li>
-                            <small class="mb-3 small">
-                                <li>Dev.yml- This file runs the pytest and deployes the code to development environment
-                                    when
-                                    Push request is hit
+                            <div class="h4">Workflow</div>
+                            <ul>
+                                <li>dev.yml- This file executed on when pull request is hit. It first runs the pytest to
+                                    check
+                                    for any test faliur and deployes the code to deployment environment
                                 </li>
-                                <li>Prod.yml- This file runs the pytest and deployes the code to production environment
-                                    when
-                                    pull request is successful and Merge is hit. This file builds container and then
-                                    uploads
-                                    the image to docker hub
-                                </li>
-                                <br>
-                            </small></small>
+                                <small class="mb-3 small">
+                                    <li>Dev.yml- This file runs the pytest and deployes the code to development
+                                        environment
+                                        when
+                                        Push request is hit
+                                    </li>
+                                    <li>Prod.yml- This file runs the pytest and deployes the code to production
+                                        environment
+                                        when
+                                        pull request is successful and Merge is hit. This file builds container and then
+                                        uploads
+                                        the image to docker hub
+                                    </li>
+                                </small>
+                            </ul>
+                            <br>
+
+                        </small></small>
                     </blockquote>
                     </small> </div>
             </div>
@@ -100,7 +106,8 @@
                             </li>
                         </div>
                     </small></small></small>
-        </blockquote></div>
+        </blockquote>
+    </div>
 </div>
 </div>
 </div>
