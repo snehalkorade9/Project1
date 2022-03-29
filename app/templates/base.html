@@ -75,7 +75,7 @@
 <script>
     $(function(){
         $('a').each(function(){
-            if ($(location).attr("href") == window.location.href) {
+            if ($(this).prop('href') == window.location.href) {
                 $(this).addClass('active'); $(this).parents('li').addClass('active');
             }
         });
