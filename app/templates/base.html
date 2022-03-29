@@ -70,13 +70,14 @@
     {% block content %}
     {% endblock %}
 </div>
-<!--test-->
+
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script>
     $(function(){
         $('a').each(function(){
             if ($(location).attr("href") == window.location.href) {
-                $(location).addClass('active'); $(location).parents('li').addClass('active');
+                $(this).addClass('active'); $(this).parents('li').addClass('active');
+                alert($(location).attr("href"))
             }
         });
     });
