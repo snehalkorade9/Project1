@@ -75,9 +75,8 @@
 <script>
     $(function(){
         $('a').each(function(){
-            alert($(location).attr("href"))
-            if ($(this).prop('href') == window.location.href) {
-                $(this).addClass('active'); $(this).parents('li').addClass('active');
+            if ($(location).attr("href") == window.location.href) {
+                $(location).addClass('active'); $(this).parents('li').addClass('active');
             }
         });
     });
